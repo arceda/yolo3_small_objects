@@ -1,0 +1,36 @@
+{
+    "model" : {
+        "architecture":         "Full Yolo",
+        "input_size":           416,
+        "anchors":              [0.92,4.20, 2.03,1.15, 2.39,5.80, 3.96,2.58, 5.22,6.17],
+        "max_box_per_image":    10,        
+        "labels":               ["ship"]
+    },
+
+    "train": {
+        "train_image_folder":   "/home/enrique/datasets/HRSC2016/Train/AllImages/",
+        "train_annot_folder":   "/home/enrique/datasets/HRSC2016/Train/AnnotationsVOC/",
+          
+        "train_times":          10,
+        "pretrained_weights":   "weights_training//ship_full_yolo_warnup_weights.h5",
+        "batch_size":           16,
+        "learning_rate":        1e-4,
+        "nb_epoch":             100,
+        "warmup_epochs":        0,
+
+        "object_scale":         5.0 ,
+        "no_object_scale":      1.0,
+        "coord_scale":          1.0,
+        "class_scale":          1.0,
+
+        "saved_weights_name":   "weights_training//ship_full_yolo_weights.h5",
+        "debug":                true
+    },
+
+    "valid": {
+        "valid_image_folder":   "",
+        "valid_annot_folder":   "",
+
+        "valid_times":          1
+    }
+}
