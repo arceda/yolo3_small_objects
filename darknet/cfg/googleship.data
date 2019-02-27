@@ -1,0 +1,5 @@
+classes= 1
+train  = /home/administrador/vicente-proyectos/object_detection/yolo3_small_objects/darknet/train.txt
+valid  = /home/administrador/vicente-proyectos/object_detection/yolo3_small_objects/darknet/val.txt
+names = /data/googleship.names
+backup = backup
